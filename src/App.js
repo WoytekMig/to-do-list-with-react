@@ -6,8 +6,6 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
-
-
 const tasks = [
   { id: 1, content: "convert to react.js", done: false },
   { id: 2, content: "change language", done: true },
