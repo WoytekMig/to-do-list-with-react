@@ -26,7 +26,6 @@ function App() {
       <Section title="Task list"
         subDivContent={<Buttons tasks={tasks} hideDoneTask={hideDoneTask} />}
         body={<Tasks tasks={tasks} hideDoneTask={hideDoneTask} />} />
-
     </Container>
   );
 };
