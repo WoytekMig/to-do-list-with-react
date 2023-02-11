@@ -1,18 +1,18 @@
 import React from "react";
-import "./sectionButtons.css";
+import "./style.css";
 
 const Buttons = ({ tasks, hideDoneTask }) => (
-    <div className="section section__subDiv">
+    <div className="buttons">
         {tasks.length > 0 && (
-            <React.Fragment>
-                <button className="section__button js-toggleShowing">
+            <>
+                <button className="buttons__layout js-toggleShowing">
                     {hideDoneTask ? "Show" : "Hide"} finished
                 </button>
-                <button className="section__button"
+                <button className="buttons__layout"
                     disabled={tasks.every(({ done }) => done)}>
                     Finish all
                 </button>
-            </React.Fragment>
+            </>
         )}
     </div>
 );

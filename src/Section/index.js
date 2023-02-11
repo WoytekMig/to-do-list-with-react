@@ -1,9 +1,9 @@
 import React from "react";
-import "./section.css";
+import "./style.css";
 
 const Section = ({ title, subDivContent, body }) => (
-    <section className="section__main">
-        <header className="section section__header">
+    <section className="section">
+        <header className="section__header">
             <h2 className="section__secondHeader">{title}</h2>
             {subDivContent}
         </header>

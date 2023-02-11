@@ -1,34 +1,31 @@
-.section {
+.buttons {
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
     grid-gap: 20px;
     justify-content: space-between;
     align-items: center;
+    color: hsl(180, 100%, 25%);
+    text-decoration: dotted;    
 }
 
 @media (max-width: 767px) {
-    .section {
+    .buttons {
         grid-template-columns: 1fr;
     }
 }
 
-.section__subDiv {
-    color: hsl(180, 100%, 25%);
-    text-decoration: dotted;
-} 
-
-.section__button {
+.buttons__layout {
     margin: auto;
     background: transparent;
     border: none;
     color: hsl(180, 100%, 25%);
 }
 
-.section__button:hover {
+.buttons__layout:hover {
     color: hsl(180, 100%, 35%);
     transition: 0.3s;
 }
 
-.section__button:disabled {
+.buttons__layout:disabled {
     color: #ccc;
 }

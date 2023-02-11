@@ -1,4 +1,4 @@
-import "./form.css";
+import "./style.css";
 
 const Form = () => (
     <form className="form">

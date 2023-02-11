@@ -1,6 +1,5 @@
 import React from "react";
-import "./task.css";
-import "./button.css";
+import "./style.css";
 
 const Tasks = ({ tasks, hideDoneTask }) => (
     <ul className="task__list">
