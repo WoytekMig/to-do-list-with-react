@@ -9,7 +9,7 @@ import Container from "./Container";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [task, setTasks] = useState (
+  const [task, setTasks] = useState(
     [
       { id: 1, content: "convert to react.js", done: false },
       { id: 2, content: "change language", done: true },
@@ -20,9 +20,19 @@ function App() {
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
   };
-const removeTask = (id) => {
-  setTasks = ( tasks => tasks.filter(task => task.id !== id))
-};
+
+  const removeTask = (id) => {
+    setTasks = (tasks => tasks.filter(task => task.id !== id));
+  };
+
+  const toggleTaskDone = (id) => {
+    setTasks = (tasks => tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+      return task;
+    }));
+  };
 
   return (
     <Container>
@@ -42,6 +52,7 @@ const removeTask = (id) => {
             tasks={tasks}
             hideDone={hideDone}
             removeTask={removeTask}
+            toggleTaskDone={toggleTaskDone}
           />}
       />
     </Container>
