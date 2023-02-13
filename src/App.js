@@ -12,7 +12,7 @@ const tasks = [
   { id: 3, content: "learn how to deploy", done: true },
 ];
 
-const hideDoneTask = false;
+const hideDone = false;
 
 function App() {
   return (
@@ -22,8 +22,8 @@ function App() {
         body={<Form />} />
 
       <Section title="Task list"
-        subDivContent={<Buttons tasks={tasks} hideDoneTask={hideDoneTask} />}
-        body={<Tasks tasks={tasks} hideDoneTask={hideDoneTask} />} />
+        subDivContent={<Buttons tasks={tasks} hideDone={hideDone} />}
+        body={<Tasks tasks={tasks} hideDone={hideDone} />} />
     </Container>
   );
 };
