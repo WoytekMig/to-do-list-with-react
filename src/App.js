@@ -9,10 +9,10 @@ import Container from "./Container";
 
 function App() {
   const [hideDone, setHideDone] = useState(false);
-  const [task, setTasks] = useState(
+  const [tasks, setTasks] = useState(
     [
       { id: 1, content: "convert to react.js", done: false },
-      { id: 2, content: "change language", done: true },
+      { id: 2, content: "change language to EN", done: true },
       { id: 3, content: "learn how to deploy", done: true },
     ]
   );
@@ -21,9 +21,9 @@ function App() {
     setTasks(tasks => [
       ...tasks,
       {
-        id: task.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
         content: newTaskContent,
-        done: false
+        done: false, 
       },
     ])
   }
