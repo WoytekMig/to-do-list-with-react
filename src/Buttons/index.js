@@ -6,7 +6,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) => (
         {tasks.length > 0 && (
             <>
                 <button onClick={toggleHideDone}
-                    className="buttons__layout js-toggleShowing">
+                    className="buttons__layout">
                     {hideDone ? "Show" : "Hide"} finished
                 </button>
                 <button

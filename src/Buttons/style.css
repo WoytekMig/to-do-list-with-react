@@ -11,7 +11,7 @@
 @media (max-width: 767px) {
     .buttons {
         grid-template-columns: 1fr;
-    };
+    }
 }
 
 .buttons__layout {

@@ -5,20 +5,21 @@ const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const onFormSubmit = (event) => {
         event.preventDefault();
-        if (newTaskContent === "") {
+        if (newTaskContent.trim() === "") {
             return;
         }
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
-
     };
 
     return (
         <form className="form" onSubmit={onFormSubmit}>
             <input type="text"
+                placeholder="What you need to do?"
+                value={newTaskContent}
                 name="nameTheTask"
                 className="form__input"
-                placeholder="What you need to do?"
+
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 autofocus
             />
