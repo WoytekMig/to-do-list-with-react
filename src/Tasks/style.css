@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
-    align-items: center;
+    align-items: right;
     border-bottom: 1px solid #ededed;
     padding: 10px;
     word-break: break-all;
@@ -19,11 +19,11 @@
 }
 
 .task {
+    display: grid;
     grid: 1fr;
     padding-left: 10px;
     padding-bottom: 10px;
     padding-top: 5px;
-    justify-content: center;
 }
 
 .task__taskDone {
