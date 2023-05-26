@@ -13,7 +13,9 @@ function App() {
   const [tasks, setTasks] = useState(
     (JSON.parse(localStorage.getItem("storageTasks"))) ?? []);
 
-  useEffect(() => localStorage.setItem("storageTasks", JSON.stringify(tasks)));
+  useEffect(() => {
+    localStorage.setItem("storageTasks", JSON.stringify(tasks))
+  }, [tasks]);
 
   const addNewTask = (newTaskContent) => {
     setTasks(tasks => [
