@@ -11,9 +11,9 @@ And also using BEM convention in :
 
 It is another exercise task during YouCode programmig course :) My previous scopes are in my repository. Here's a little demo : 
 
-![show](public/taskListShow2.gif)
+![show](public/to-do-list-react-v3.gif)
 
-This time, the target was to rewrite code by using react.js :) I also decided to change language to english. 
+At the beggining, the target was to rewrite code by using react.js :) I also decided to change language to english. Then I needed to add using local storage, to make sure your taks will stay with you, even if you close the app ;) 
 
 
 
