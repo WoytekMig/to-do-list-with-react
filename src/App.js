@@ -6,15 +6,18 @@ import Section from "./Section";
 import Header from "./Header";
 import Container from "./Container";
 
+const hideDoneLocalStorageKey = "hideDoneStatus";
+const taskLocalStorageKey = "storageTasks";
+
 function App() {
   const [hideDone, setHideDone] = useState(
-    (JSON.parse(localStorage.getItem("hideDoneStatus"))) ?? false);
+    (JSON.parse(localStorage.getItem(hideDoneLocalStorageKey))) ?? false);
 
   const [tasks, setTasks] = useState(
-    (JSON.parse(localStorage.getItem("storageTasks"))) ?? []);
+    (JSON.parse(localStorage.getItem(taskLocalStorageKey))) ?? []);
 
   useEffect(() => {
-    localStorage.setItem("storageTasks", JSON.stringify(tasks))
+    localStorage.setItem(taskLocalStorageKey, JSON.stringify(tasks))
   }, [tasks]);
 
   const addNewTask = (newTaskContent) => {
@@ -32,7 +35,7 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
-  useEffect(() => localStorage.setItem("hideDoneStatus", JSON.stringify(hideDone)));
+  useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone)));
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
