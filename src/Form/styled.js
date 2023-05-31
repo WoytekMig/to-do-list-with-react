@@ -1,47 +1,40 @@
-.form {
+import styled from "styled-components";
+
+export const FormStyle = styled.form`
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
-}
 
-@media (max-width: 767px) {
-    .form {
-        grid-template-columns: 1fr;
+    @media (max-width: 767px) {
+    grid-template-columns: 1fr;
     }
-}
+`;
 
-.form__container--input {
-    margin-bottom: 7px;
-    padding: 10px;
-}
-
-.form__input {
+export const Input = styled.input`
     padding: 10px;
     border: #ededed solid 1px;
     font-weight: 300;
     word-break: break-word;
-}
 
-@media (max-width: 767px) {
-    .form__input {
-        margin-bottom: 10px;
+    @media (max-width: 767px) {
+    margin-bottom: 10px;
     }
-}
+`;
 
-.form__button {
+export const Button = styled.button`
     padding: 10px;
     background-color: hsl(180, 100%, 25%);
     border: none;
     color: white;
     font-weight: 100;
-}
 
-.form__button:hover {
+&:hover {
     background-color: hsl(180, 100%, 30%);
     transform: scale(1.1);
     transition: 0.5s;
 }
 
-.form__button:active {
+&:active {
     background-color: hsl(180, 100%, 35%);
 }
+`;
