@@ -10,10 +10,8 @@ export const ButtonsDiv = styled.div`
     text-decoration: dotted;  
     
     @media (max-width: 767px) {
-    .buttons {
         grid-template-columns: 1fr;
     }
-}
 `;
 
 export const ButtonLayout = styled.button`
