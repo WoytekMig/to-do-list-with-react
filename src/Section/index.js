@@ -1,16 +1,16 @@
 import React from "react";
-import "./style.css";
+import { SectionElement, SectionHeader, SubHeader, Container } from "./styled";
 
 const Section = ({ title, subDivContent, body }) => (
-    <section className="section">
-        <header className="section__header">
-            <h2 className="section__secondHeader">{title}</h2>
+    <SectionElement>
+        <SectionHeader>
+            <SubHeader>{title}</SubHeader>
             {subDivContent}
-        </header>
-        <div className="section__container">
+        </SectionHeader>
+        <Container>
             {body}
-        </div>
-    </section>
+        </Container>
+    </SectionElement>
 );
 
 export default Section;
