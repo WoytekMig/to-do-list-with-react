@@ -1,10 +1,18 @@
 import React from "react";
-import "./style.css";
+import styled from "styled-components";
+
+const Main = styled.main`
+    font-family: 'Montserrat', sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    display: block;
+    max-width: 900px;
+`;
 
 const Containter = ({ children }) => (
-    <main className="main">
+    <Main>
         {children}
-    </main>
+    </Main>
 );
 
 export default Containter;
