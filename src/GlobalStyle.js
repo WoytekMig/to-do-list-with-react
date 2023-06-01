@@ -1,13 +1,13 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-html {
-  box-sizing: border-box;
-  background-color: #ededed;
-}
+  html {
+      box-sizing: border-box;
+      background-color: #ededed;
+  }
 
 *,
-::after, ::before {
-  box-sizing: inherit;
-}
+  ::after, ::before {
+      box-sizing: inherit;
+  }
 `;
