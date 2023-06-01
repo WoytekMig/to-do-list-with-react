@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
 html {
   box-sizing: border-box;
   background-color: #ededed;
@@ -7,3 +10,4 @@ html {
 ::after, ::before {
   box-sizing: inherit;
 }
+`;

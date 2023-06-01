@@ -6,26 +6,28 @@ export const ButtonsDiv = styled.div`
     grid-gap: 20px;
     justify-content: space-between;
     align-items: center;
-    color: hsl(180, 100%, 25%);
-    text-decoration: dotted;  
-    
-    @media (max-width: 767px) {
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
     }
 `;
 
 export const ButtonLayout = styled.button`
-    margin: auto;
+    margin: 0 0 0 20px;
     background: transparent;
     border: none;
-    color: hsl(180, 100%, 25%);
+    color: ${({ theme }) => theme.color.teal}; 
+    transition: filter 0.3s;
 
 &:hover {
-    color: hsl(180, 100%, 35%);
-    transition: 0.3s;
+    filter: brightness(110%);
+}
+
+&:active {
+    filter: brightness(120%);
 }
 
 &:disabled {
-    color: #ccc;
+    color: ${({ theme }) => theme.color.silver};
 }
 `;

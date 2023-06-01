@@ -14,7 +14,7 @@ It is another exercise task during YouCode programmig course :) My previous scop
 ![show](public/to-do-list-react-v3.gif)
 
 At the beggining, the target was to rewrite code by using react.js :) I also decided to change language to english. Then I needed to add using local storage, to make sure your taks will stay with you, even if you close the app ;) 
-I also learned how to use, and then converted app with use of styled-components.
+I also learned how to use, and then converted app with use of styled-components (including ThemeProvider and GlobalStyle).
 Next step was to start using hooks (useRef, useState and useEffect) and even creating one by myself ;) 
 
 # Getting Started with Create React App

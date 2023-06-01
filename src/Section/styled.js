@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const SectionElement = styled.section`
-    box-shadow: 0 0 5px #ddd;
-    background-color: white;
+    box-shadow: 0 0 5px ${({ theme }) => theme.color.alto};
+    background-color: ${({ theme }) => theme.color.white};
     margin: 10px 0;
 `;
 
@@ -14,9 +14,9 @@ export const SectionHeader = styled.header`
         align-items: center;
         padding: 20px;
         margin: 0;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid ${({ theme }) => theme.color.alto};
 
-        @media (max-width: 767px) {
+        @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
         }
     `;

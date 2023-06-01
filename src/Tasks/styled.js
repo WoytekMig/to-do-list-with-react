@@ -11,7 +11,7 @@ export const Item = styled.li`
     grid-template-columns: auto 1fr auto;
     grid-gap: 10px;
     align-items: right;
-    border-bottom: 1px solid #ededed;
+    border-bottom: 1px solid ${({ theme }) => theme.color.alto};
     padding: 10px;
     word-break: break-all;
 
@@ -36,33 +36,24 @@ export const Button = styled.button`
     border: none;
     width: 30px;
     height: 30px;
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     padding: 0;
+    transition: 0.3s;
 
     ${({ done }) => done && css`
-        background-color: hsl(120, 60%, 35%);
-    
-        &:hover {
-            background-color: hsl(135, 60%, 40%);
-            transition: 0.3s;
-        }
-
-        &:active {
-            background-color: hsl(135, 60%, 45%);
-        }
+    background: ${({ theme }) => theme.color.forestGreen};
     ` }
 
 
     ${({ remove }) => remove && css`
-    background-color: hsl(348, 83%, 47%);
+    background: ${({ theme }) => theme.color.crimson};
+    ` }
 
     &:hover {
-        background-color: hsl(348, 83%, 52%);
-        transition: 0.3s;
+        filter: brightness(110%);
     }
 
     &:active {
-        background-color: hsl(348, 83%, 57%);
+        filter: brightness(120%);
     }
-    ` }
-`;
+ `;

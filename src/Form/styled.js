@@ -5,36 +5,36 @@ export const FormStyle = styled.form`
     grid-template-columns: 1fr auto;
     grid-gap: 20px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     grid-template-columns: 1fr;
     }
 `;
 
 export const Input = styled.input`
     padding: 10px;
-    border: #ededed solid 1px;
+    border: solid 1px ${({ theme }) => theme.color.gallery};
     font-weight: 300;
     word-break: break-word;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
     margin-bottom: 10px;
     }
 `;
 
 export const Button = styled.button`
     padding: 10px;
-    background-color: hsl(180, 100%, 25%);
+    background: ${({ theme }) => theme.color.teal};
     border: none;
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     font-weight: 100;
+    transition: filter 0.5s;
 
 &:hover {
-    background-color: hsl(180, 100%, 30%);
+    filter: brightness(110%);
     transform: scale(1.1);
-    transition: 0.5s;
 }
 
 &:active {
-    background-color: hsl(180, 100%, 35%);
+    filter: brightness(120%);
 }
 `;
