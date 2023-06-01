@@ -40,15 +40,6 @@ export const Button = styled.button`
     padding: 0;
     transition: 0.3s;
 
-    ${({ done }) => done && css`
-    background: ${({ theme }) => theme.color.forestGreen};
-    ` }
-
-
-    ${({ remove }) => remove && css`
-    background: ${({ theme }) => theme.color.crimson};
-    ` }
-
     &:hover {
         filter: brightness(110%);
     }
@@ -56,4 +47,12 @@ export const Button = styled.button`
     &:active {
         filter: brightness(120%);
     }
+ `;
+
+export const ToggleDoneButton = styled(Button)`
+    background: ${({ theme }) => theme.color.forestGreen};
+ `;
+
+export const RemoveButton = styled(Button)`
+    background: ${({ theme }) => theme.color.crimson};
  `;

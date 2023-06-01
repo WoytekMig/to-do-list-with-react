@@ -1,5 +1,5 @@
 import React from "react";
-import { List, Item, Content, Button } from "./styled";
+import { List, Item, Content, ToggleDoneButton, RemoveButton } from "./styled";
 
 const Tasks = ({ tasks, hideDone, toggleTaskDone, removeTask }) => (
     <List>
@@ -7,18 +7,18 @@ const Tasks = ({ tasks, hideDone, toggleTaskDone, removeTask }) => (
             <Item
                 hidden={hideDone && task.done}
                 key={task.id}>
-                <Button onClick={() => toggleTaskDone(task.id)}
-                    done>
+                <ToggleDoneButton
+                    onClick={() => toggleTaskDone(task.id)}>
                     {task.done ? "✔" : ""}
-                </Button>
+                </ToggleDoneButton>
                 <Content
                     done={task.done}>
                     {task.content}
                 </Content>
-                <Button onClick={() => removeTask(task.id)}
-                    remove>
+                <RemoveButton
+                    onClick={() => removeTask(task.id)}>
                     🗑
-                </Button>
+                </RemoveButton>
             </Item>
         ))}
     </List>
