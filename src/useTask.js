@@ -42,12 +42,12 @@ export const useTask = () => {
             done: true,
         })));
     };
-    
+
     const toggleHideDone = () => {
         setHideDone(hideDone => !hideDone);
-      };
-    
-     useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone)));
+    };
+
+    useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone)));
 
     return {
         tasks, addNewTask, removeTask, toggleTaskDone, setAllDone, hideDone, toggleHideDone
