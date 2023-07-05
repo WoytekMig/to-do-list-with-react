@@ -9,8 +9,8 @@ import { useTask } from "../../useTask";
 function Tasks() {
 
   const { tasks, removeTask, toggleTaskDone,
-          setAllDone, addNewTask, 
-          hideDone, toggleHideDone } = useTask();
+    setAllDone, addNewTask,
+    hideDone, toggleHideDone } = useTask();
 
   return (
     <Container>
