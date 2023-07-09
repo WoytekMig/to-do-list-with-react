@@ -1,12 +1,9 @@
 import { useEffect, useState } from "react";
 
 const taskLocalStorageKey = "storageTasks";
-const hideDoneLocalStorageKey = "hideDoneStatus";
+/* const hideDoneLocalStorageKey = "hideDoneStatus"; */
 
 export const useTask = () => {
-
-    const [hideDone, setHideDone] = useState(
-        (JSON.parse(localStorage.getItem(hideDoneLocalStorageKey))) ?? false);
 
     const [tasks, setTasks] = useState(
         (JSON.parse(localStorage.getItem(taskLocalStorageKey))) ?? []);
@@ -43,14 +40,10 @@ export const useTask = () => {
         })));
     };
 
-    const toggleHideDone = () => {
-        setHideDone(hideDone => !hideDone);
-    };
-
-    useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone)));
+/*     useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone))); */
 
     return {
-        tasks, addNewTask, removeTask, toggleTaskDone, setAllDone, hideDone, toggleHideDone
+        tasks, addNewTask, removeTask, toggleTaskDone, setAllDone
     }
 
 };
