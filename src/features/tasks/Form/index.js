@@ -5,7 +5,7 @@ import {Button, StyledForm, Input} from "./styled";
 import { addTask } from "../tasksSlice";
 
 
-const Form = ({ addNewTask }) => {
+const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const inputRef = useRef(null);
 
@@ -20,7 +20,7 @@ const Form = ({ addNewTask }) => {
         dispatch(addTask({
             content: newTaskContent.trim(),
             done: false,
-           /*  id: nanoid(), */
+            id: nanoid(),
         }));
 
         setNewTaskContent("");

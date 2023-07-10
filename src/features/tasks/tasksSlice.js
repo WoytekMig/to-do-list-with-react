@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { createSlice } from '@reduxjs/toolkit';
 
 const tasksSlice = createSlice({
@@ -8,28 +7,33 @@ const tasksSlice = createSlice({
         hideDone: false,
     },
     reducers: {
-        addTask: ({ tasks }, { payload }) => {
-            tasks.push(payload);
+        addTask: ({ tasks }, { payload: newTask }) => {
+            tasks.push(newTask);
         },
         toggleHideDone: state => {
             state.hideDone = !state.hideDone;
         },
-        toggleTaskDone : ({tasks}, {payload}) => {
-            const index = tasks.findIndex(({id}) => id === payload);
+        toggleTaskDone: ({ tasks }, { payload: taskId }) => {
+            const index = tasks.findIndex(({ id }) => id === taskId);
             tasks[index].done = !tasks[index].done;
         },
-       /*  removeTask : ({tasks}, action) => {
-            const index = tasks.findIndex(task => task.id === action.payload);
-           tasks[index] 
-
-        }*/
+        removeTask: ({ tasks }, { payload: taskId }) => {
+            const index = tasks.findIndex(({ id }) => id === taskId);
+            tasks.splice(index, 1);
+        },
+        setAllDone: ({ tasks }) => {
+            tasks.forEach((task) => task.done = true);
+        }
     },
-
-    /*  useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone))); */
 });
 
+export const { addTask,
+    toggleHideDone,
+    toggleTaskDone,
+    removeTask,
+    setAllDone } = tasksSlice.actions;
 
-
-export const { addTask, toggleHideDone, toggleTaskDone } = tasksSlice.actions;
 export const selectTasks = state => state.tasks;
+export const selectAreTasksEmpty = state => selectTasks(state).length === 0;
+
 export default tasksSlice.reducer;
