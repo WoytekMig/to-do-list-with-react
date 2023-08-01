@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
 const taskLocalStorageKey = "storageTasks";
-/* const hideDoneLocalStorageKey = "hideDoneStatus"; */
 
 export const useTask = () => {
 
@@ -39,8 +38,6 @@ export const useTask = () => {
             done: true,
         })));
     };
-
-/*     useEffect(() => localStorage.setItem(hideDoneLocalStorageKey, JSON.stringify(hideDone))); */
 
     return {
         tasks, addNewTask, removeTask, toggleTaskDone, setAllDone
