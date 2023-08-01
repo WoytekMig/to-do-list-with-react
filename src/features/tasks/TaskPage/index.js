@@ -1,4 +1,3 @@
-
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
@@ -12,8 +11,7 @@ function TasksPage() {
     return (
         <Container>
             <Header title="Task details" />
-            <Section title={task? task.content : "There's no such task..." }
-
+            <Section title={task ? task.content : "There's no such task..."}
                 body={
                     <> <strong>Task finished:</strong> {task.done ? "Yes" : "No"} </>}
             />

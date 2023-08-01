@@ -4,17 +4,15 @@ import TaskPage from './features/tasks/TaskPage';
 import AuthorPage from "./features/AuthorPage/AuthorPage";
 import { Navigation, LinkButton } from "./styled";
 
-
 export default () => (
     <HashRouter>
         <Navigation>
-            <NavLink activeClassName="active" to="/Tasks">
+            <LinkButton to="/Tasks">
                 To-do List
-            </NavLink>
-
-            <NavLink activeClassName="active" to="/Author">
+            </LinkButton>
+            <LinkButton to="/Author">
                 About Author
-            </NavLink>
+            </LinkButton>
         </Navigation>
 
         <Switch>
@@ -28,6 +26,5 @@ export default () => (
                 <AuthorPage />
             </Route>
         </Switch>
-
     </HashRouter>
 );

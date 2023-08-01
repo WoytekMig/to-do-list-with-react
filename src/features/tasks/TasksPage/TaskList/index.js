@@ -4,14 +4,13 @@ import { List, Item, Content, ToggleDoneButton, RemoveButton } from "./styled";
 import { toggleTaskDone, removeTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
 import searchQueryParamName from "../searchQueryParamName";
 
-
 const TaskList = () => {
     const location = useLocation();
-    const query = (new URLSearchParams(location.search)).get(searchQueryParamName); 
+    const query = (new URLSearchParams(location.search)).get(searchQueryParamName);
 
     const tasks = useSelector(state => selectTasksByQuery(state, query));
-    const hideDone = useSelector(selectHideDone); 
-    
+    const hideDone = useSelector(selectHideDone);
+
     const dispatch = useDispatch();
 
     return (
@@ -26,7 +25,7 @@ const TaskList = () => {
                     </ToggleDoneButton>
                     <Content
                         done={task.done}>
-                     <Link to={`/Tasks/${task.id}`}>{task.content}</Link> 
+                        <Link to={`/Tasks/${task.id}`}>{task.content}</Link>
                     </Content>
                     <RemoveButton
                         onClick={() => dispatch(removeTask(task.id))}>
