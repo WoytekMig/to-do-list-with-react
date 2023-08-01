@@ -20,7 +20,7 @@ const TaskList = () => {
                     </ToggleDoneButton>
                     <Content
                         done={task.done}>
-                    <Link to={`/Tasks/${task.id}`}>{task.content}</Link> 
+                     <Link to={`/Tasks/${task.id}`}>{task.content}</Link> 
                     </Content>
                     <RemoveButton
                         onClick={() => dispatch(removeTask(task.id))}>
