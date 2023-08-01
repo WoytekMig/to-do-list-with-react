@@ -1,15 +1,15 @@
 import Form from "./Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import Container from "../../common/Container";
-import { TransparentButton } from "./styled";
-import { fetchExampleTasks } from "./tasksSlice";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import Container from "../../../common/Container";
+import { TransparentButton } from "../styled";
+import { fetchExampleTasks } from "../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAreTaskLoading } from "./tasksSlice";
+import { selectAreTaskLoading } from "../tasksSlice";
 
-function Tasks() {
+function TasksPage() {
   const loading = useSelector(selectAreTaskLoading);
   const dispatch = useDispatch();
 
@@ -36,4 +36,4 @@ function Tasks() {
   );
 };
 
-export default Tasks;
+export default TasksPage;

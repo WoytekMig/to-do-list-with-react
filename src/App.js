@@ -1,31 +1,31 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks";
-import Author from "./features/Author/Author";
+import { HashRouter, Switch, Route, NavLink } from "react-router-dom";
+import TasksPage from "./features/tasks/TasksPage/index";
+import AuthorPage from "./features/AuthorPage/AuthorPage";
 import { Navigation, LinkButton } from "./styled";
 
 
 export default () => (
-    <BrowserRouter>
+    <HashRouter>
         <Navigation>
-            <LinkButton to="/Tasks">
+            <NavLink activeClassName="active" to="/Tasks">
                 To-do List
-            </LinkButton>
+            </NavLink>
 
-            <LinkButton to="/Author">
+            <NavLink activeClassName="active" to="/Author">
                 About Author
-            </LinkButton>
+            </NavLink>
 
         </Navigation>
         <Switch>
             <Route path="/Tasks">
-                <Tasks />
+                <TasksPage />
             </Route>
         </Switch>
         <Switch>
             <Route path="/Author">
-                <Author />
+                <AuthorPage />
             </Route>
         </Switch>
 
-    </BrowserRouter>
+    </HashRouter>
 );

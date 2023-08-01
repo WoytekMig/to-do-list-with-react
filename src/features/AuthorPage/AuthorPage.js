@@ -5,7 +5,7 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
 
-function Author() {
+function AuthorPage() {
 
   return (
     <Container>
@@ -19,4 +19,4 @@ function Author() {
   );
 };
 
-export default Author;
+export default AuthorPage;
