@@ -27,7 +27,7 @@ function TasksPage() {
         body={
           <Form />}
       />
-      <Section title="Searcher"
+      <Section title="Search"
         body={
           < Search />}
       />
