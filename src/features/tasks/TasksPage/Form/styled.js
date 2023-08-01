@@ -10,17 +10,6 @@ export const StyledForm = styled.form`
     }
 `;
 
-export const Input = styled.input`
-    padding: 10px;
-    border: solid 1px ${({ theme }) => theme.color.gallery};
-    font-weight: 300;
-    word-break: break-word;
-
-    @media (max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
-    margin-bottom: 10px;
-    }
-`;
-
 export const Button = styled.button`
     padding: 10px;
     background: ${({ theme }) => theme.color.teal};

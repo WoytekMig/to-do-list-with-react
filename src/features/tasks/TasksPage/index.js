@@ -4,6 +4,7 @@ import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Container from "../../../common/Container";
+import Search from "./Search";
 import { TransparentButton } from "../styled";
 import { fetchExampleTasks } from "../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -25,6 +26,10 @@ function TasksPage() {
           </TransparentButton>}
         body={
           <Form />}
+      />
+      <Section title="Searcher"
+        body={
+          < Search />}
       />
       <Section title="Task list"
         subDivContent={

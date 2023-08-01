@@ -15,19 +15,15 @@ export default () => (
             <NavLink activeClassName="active" to="/Author">
                 About Author
             </NavLink>
-
         </Navigation>
+
         <Switch>
             <Route path="/Tasks/:id">
                 <TaskPage />
             </Route>
-        </Switch>
-        <Switch>
             <Route path="/Tasks">
                 <TasksPage />
             </Route>
-        </Switch>
-        <Switch>
             <Route path="/Author">
                 <AuthorPage />
             </Route>
