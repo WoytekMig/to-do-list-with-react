@@ -6,12 +6,11 @@ import Header from "../../common/Header";
 import Container from "../../common/Container";
 import { TransparentButton } from "./styled";
 import { fetchExampleTasks } from "./tasksSlice";
-import { useDispatch } from "react-redux";
-
-
+import { useDispatch, useSelector } from "react-redux";
+import { selectAreTaskLoading } from "./tasksSlice";
 
 function Tasks() {
-
+  const loading = useSelector(selectAreTaskLoading);
   const dispatch = useDispatch();
 
   return (
@@ -19,8 +18,10 @@ function Tasks() {
       <Header title="To-Do List" />
       <Section title="Add new task"
         subDivContent={
-          <TransparentButton onClick={() => dispatch(fetchExampleTasks())}>
-            Load the example tasks
+          <TransparentButton
+            onClick={() => dispatch(fetchExampleTasks())}
+            disabled={loading}  >
+            {loading ? "Loading..." : "Load the example tasks"}
           </TransparentButton>}
         body={
           <Form />}
