@@ -3,8 +3,11 @@
 Here's my big step forward [**A To-Do list, this time with React** - feel free to check it out :)](https://woytekmig.github.io/to-do-list-with-react/)
 
 The task ( ;) ) was to make first contact with:  
-- [x] **React.js**   
-- [x] **Redux.js**   
+- [x] **React.js**  
+- [x] **React-router**   
+- [x] **Redux.js**
+- [x] **Redux-saga**  
+- [x] **Redux/toolkit**    
 And also using BEM convention in :
 - [x] **JS** (ES6)  
 - [x] **HTML** 
@@ -12,12 +15,14 @@ And also using BEM convention in :
 
 It is another exercise task during YouCode programmig course :) My previous scopes are in my repository. Here's a little demo : 
 
-![show](public/to-do-list-react-v3.gif)
+![show](to-do-list-react-v4.gif)
 
 At the beggining, the target was to rewrite code by using react.js :) I also decided to change language to english. Then I needed to add using local storage, to make sure your taks will stay with you, even if you close the app ;) 
 I also learned how to use, and then converted app with use of styled-components (including ThemeProvider and GlobalStyle).
 Next step was to start using hooks (useRef, useState and useEffect) and even creating one by myself ;) 
 Another..task ;) Was to implement Redux to my app. I create store and few reducers. Also I split my files to the common/features folders.
+In next steps I implemented redux-saga, redux/toolkit and react-router-dom. Now, you can fetch an example tasks by using async function ;) 
+Another features helps you to search your task and to check its details:) 
 
 # Getting Started with Create React App
 
