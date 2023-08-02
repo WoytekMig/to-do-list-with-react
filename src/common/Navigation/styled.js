@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NavLink } from 'react-router-dom';
 
-export const Navigation = styled.nav`
+export const NavStyled = styled.nav`
 height: 40px;
 width: 100%;
 

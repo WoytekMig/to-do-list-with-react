@@ -2,27 +2,21 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 import TasksPage from "./features/tasks/TasksPage/index";
 import TaskPage from './features/tasks/TaskPage';
 import AuthorPage from "./features/AuthorPage/AuthorPage";
-import { Navigation, LinkButton } from "./styled";
+import Navigation from './common/Navigation';
+import { toTask, toTasks, toAuthor } from './routes';
 
 export default () => (
     <HashRouter>
-        <Navigation>
-            <LinkButton to="/Tasks">
-                To-do List
-            </LinkButton>
-            <LinkButton to="/Author">
-                About Author
-            </LinkButton>
-        </Navigation>
+        <Navigation />
 
         <Switch>
-            <Route path="/Tasks/:id">
+            <Route path={toTask()}>
                 <TaskPage />
             </Route>
-            <Route path="/Tasks">
+            <Route path={toTasks()}>
                 <TasksPage />
             </Route>
-            <Route path="/Author">
+            <Route path={toAuthor()}>
                 <AuthorPage />
             </Route>
         </Switch>

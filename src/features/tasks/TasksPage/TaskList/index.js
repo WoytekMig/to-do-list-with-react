@@ -3,6 +3,7 @@ import { List, Item, Content, ToggleDoneButton, RemoveButton, ContentLink } from
 import { toggleTaskDone, removeTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
 import searchQueryParamName from "../searchQueryParamName";
 import { useQueryParameter } from "../queryParameters";
+import { toTask } from "../../../../routes";
 
 const TaskList = () => {
 
@@ -24,7 +25,7 @@ const TaskList = () => {
                     </ToggleDoneButton>
                     <Content
                         done={task.done}>
-                        <ContentLink to={`/Tasks/${task.id}`}>{task.content}</ContentLink>
+                        <ContentLink to={toTask({id: task.id})}>{task.content}</ContentLink>
                     </Content>
                     <RemoveButton
                         onClick={() => dispatch(removeTask(task.id))}>
