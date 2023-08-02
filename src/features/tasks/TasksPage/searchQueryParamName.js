@@ -1,1 +1,1 @@
-export default "find" ;
+export const searchQueryParamName = "find" ;

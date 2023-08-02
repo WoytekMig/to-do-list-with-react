@@ -1,6 +1,6 @@
 import Input from "../../Input"
 import { Wrapper } from "./styled";
-import searchQueryParamName from "../searchQueryParamName";
+import { searchQueryParamName } from "../searchQueryParamName";
 import { useQueryParameter, useReplaceQueryParameter } from "../queryParameters";
 
 export default () => {
@@ -13,7 +13,7 @@ export default () => {
         replaceQueryParameter({
             key: searchQueryParamName,
             value: target.value.trim() !== "" ? target.value : undefined,
-        }); 
+        });
     };
 
     return (
