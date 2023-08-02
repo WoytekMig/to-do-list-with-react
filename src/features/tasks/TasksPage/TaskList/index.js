@@ -5,7 +5,7 @@ import searchQueryParamName from "../searchQueryParamName";
 import { useQueryParameter } from "../queryParameters";
 
 const TaskList = () => {
-   
+
     const query = useQueryParameter(searchQueryParamName);
     const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
