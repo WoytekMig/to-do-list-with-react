@@ -1,8 +1,4 @@
-import { useState, useEffect } from "react";
-import searchQueryParamName from "./searchQueryParamName";
 import { useLocation, useHistory } from "react-router-dom";
-
-
 
 export const useQueryParameter = target => {
     const location = useLocation();
